@@ -1,0 +1,11 @@
+<form {{action 'authenticate' on='submit'}}>
+  <label for="identification">Login</label>
+  {{input value=identification placeholder='Enter Login' class='js-identification-input'}}
+  <label for="password">Password</label>
+  {{input value=password placeholder='Enter Password' type='password' class='js-password-input'}}
+  <button type="submit" class="js-login-button">Login</button>
+</form>
+{{#if error}}
+  <div>{{error}}</div>
+{{/if}}
+<a {{ action 'authenticateWithFacebook' }}>Login with Facebook</a>
